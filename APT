@@ -5860,3 +5860,22 @@ at java.base/java.lang.Thread.run(Thread.java:842)
 2024-11-14T14:50:45.287-03:00  INFO 27060 --- [PluginEngine] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-14T14:50:45.288-03:00  INFO 27060 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-14T14:50:45.290-03:00  INFO 27060 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-14T15:06:20.227-03:00  INFO 27728 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplicationTests     : Starting PluginEngineApplicationTests using Java 17.0.9 with PID 27728 (started by ricar in C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine)
+2024-11-14T15:06:20.229-03:00  INFO 27728 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-14T15:06:20.620-03:00  INFO 27728 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-14T15:06:20.672-03:00  INFO 27728 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2024-11-14T15:06:21.308-03:00  INFO 27728 --- [PluginEngine] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-14T15:06:21.388-03:00  INFO 27728 --- [PluginEngine] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-14T15:06:21.421-03:00  INFO 27728 --- [PluginEngine] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-14T15:06:21.726-03:00  INFO 27728 --- [PluginEngine] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-14T15:06:21.767-03:00  INFO 27728 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-14T15:06:22.177-03:00  INFO 27728 --- [PluginEngine] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@579846cc
+2024-11-14T15:06:22.180-03:00  INFO 27728 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-14T15:06:22.241-03:00  WARN 27728 --- [PluginEngine] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-14T15:06:23.016-03:00  INFO 27728 --- [PluginEngine] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-14T15:06:23.019-03:00  INFO 27728 --- [PluginEngine] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T15:06:23.722-03:00  WARN 27728 --- [PluginEngine] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-14T15:06:24.298-03:00  INFO 27728 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplicationTests     : Started PluginEngineApplicationTests in 4.274 seconds (process running for 4.961)
+2024-11-14T15:06:24.717-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T15:06:24.720-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-14T15:06:24.724-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

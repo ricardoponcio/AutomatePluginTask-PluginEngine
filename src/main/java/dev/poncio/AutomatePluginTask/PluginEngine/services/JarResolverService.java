@@ -2,7 +2,7 @@ package dev.poncio.AutomatePluginTask.PluginEngine.services;
 
 import dev.poncio.AutomatePluginTask.PluginEngine.classLoaders.JarClassLoader;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginJarLoadException;
-import interfaces.IPluginTask;
+import dev.poncio.AutomatePluginTask.PluginSdk.interfaces.IPluginTask;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.stereotype.Service;

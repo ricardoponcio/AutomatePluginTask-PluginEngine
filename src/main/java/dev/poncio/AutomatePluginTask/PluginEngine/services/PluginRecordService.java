@@ -6,7 +6,7 @@ import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.BusinessException;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.NewPluginRecordException;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginJarLoadException;
 import dev.poncio.AutomatePluginTask.PluginEngine.repositories.PluginRecordRepository;
-import interfaces.IPluginTask;
+import dev.poncio.AutomatePluginTask.PluginSdk.interfaces.IPluginTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

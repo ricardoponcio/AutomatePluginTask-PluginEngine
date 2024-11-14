@@ -9,10 +9,10 @@ import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginExecutionExce
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginJarLoadException;
 import dev.poncio.AutomatePluginTask.PluginEngine.services.PluginExecutionService;
 import dev.poncio.AutomatePluginTask.PluginEngine.services.PluginRecordService;
-import domain.PluginTaskInputParameter;
-import domain.PluginTaskInputParameterPrototype;
-import domain.PluginTaskOutput;
-import interfaces.IPluginTask;
+import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskInputParameter;
+import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskInputParameterPrototype;
+import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskOutput;
+import dev.poncio.AutomatePluginTask.PluginSdk.interfaces.IPluginTask;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

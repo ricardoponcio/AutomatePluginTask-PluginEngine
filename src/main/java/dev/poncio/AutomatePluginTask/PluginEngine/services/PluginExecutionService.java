@@ -3,8 +3,8 @@ package dev.poncio.AutomatePluginTask.PluginEngine.services;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.*;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.BusinessException;
 import dev.poncio.AutomatePluginTask.PluginEngine.repositories.PluginExecutionRepository;
-import domain.PluginTaskInputParameter;
-import domain.PluginTaskOutput;
+import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskInputParameter;
+import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
