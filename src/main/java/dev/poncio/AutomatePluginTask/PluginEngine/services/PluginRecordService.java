@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -29,6 +30,10 @@ public class PluginRecordService {
 
     @Autowired
     private StorageS3Service storageS3Service;
+
+    public List<PluginRecord> listPlugins() {
+        return this.repository.findAll();
+    }
 
     public PluginRecord addNewPluginRecord(MultipartFile file) throws NewPluginRecordException, PluginJarLoadException {
         String md5 = null;
@@ -46,7 +51,7 @@ public class PluginRecordService {
         } catch (NoSuchAlgorithmException e) {
             throw new NewPluginRecordException("Fail to load the MD5 algorithm", e);
         } catch (IOException e) {
-            throw new PluginJarLoadException("Fail retrieve file bytearray", e);
+            throw new PluginJarLoadException("Fail to retrieve file bytearray", e);
         }
 
         String uuid = UUID.randomUUID().toString();
@@ -58,7 +63,11 @@ public class PluginRecordService {
         }
 
         InputStream jarFileIS = this.jarResolverService.transformFileToIS(fileByteArray);
-        this.storageS3Service.uploadFile(uuid, jarFileIS);
+        try {
+            this.storageS3Service.uploadFile(uuid, jarFileIS);
+        } catch (IOException e) {
+            throw new PluginJarLoadException("Fail saving file in S3", e);
+        }
 
         PluginRecord newRecord = new PluginRecord();
         newRecord.setFileName(file.getName());

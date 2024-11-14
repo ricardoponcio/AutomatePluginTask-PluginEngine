@@ -1,29 +1,22 @@
 package dev.poncio.AutomatePluginTask.PluginEngine.services;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.model.PutObjectResult;
-import com.amazonaws.services.s3.model.S3Object;
-import dev.poncio.AutomatePluginTask.PluginEngine.dto.CreateConfigurationStorageS3DTO;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.ConfigurationStorageS3;
-import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.BusinessException;
-import dev.poncio.AutomatePluginTask.PluginEngine.mapper.ConfigurationStorageS3Mapper;
-import dev.poncio.AutomatePluginTask.PluginEngine.repositories.ConfigurationStorageS3Repository;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
+import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+import software.amazon.awssdk.auth.credentials.AwsCredentials;
+import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.core.ResponseBytes;
+import software.amazon.awssdk.core.sync.RequestBody;
+import software.amazon.awssdk.core.sync.ResponseTransformer;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
+import software.amazon.awssdk.services.s3.model.GetObjectResponse;
+import software.amazon.awssdk.services.s3.model.PutObjectResponse;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
 
 @Service
 public class StorageS3Service {
@@ -31,30 +24,32 @@ public class StorageS3Service {
     @Autowired
     private ConfigurationStorageS3Service configS3Service;
 
-    public PutObjectResult uploadFile(String fileNameWithPath, InputStream fileInputStream) {
+    public PutObjectResponse uploadFile(String fileNameWithPath, InputStream fileInputStream) throws IOException {
         ConfigurationStorageS3 configS3 = getConfig();
-        return get().putObject(new PutObjectRequest(
-                configS3.getS3BucketName(),
-                buildFullPath(fileNameWithPath),
-                fileInputStream,
-                null
-        ));
+        return get().putObject(request ->
+                        request
+                                .bucket(configS3.getS3BucketName())
+                                .key(buildFullPath(fileNameWithPath)),
+                RequestBody.fromInputStream(fileInputStream, fileInputStream.available()));
     }
 
     public InputStream downloadFile(String fullPath) {
         ConfigurationStorageS3 configS3 = getConfig();
-        S3Object s3file = get().getObject(
-                new GetObjectRequest(configS3.getS3BucketName(), buildFullPath(fullPath)));
-        return s3file.getObjectContent();
+        ResponseBytes<GetObjectResponse> response = get().getObject(request ->
+                        request
+                                .bucket(configS3.getS3BucketName())
+                                .key(buildFullPath(fullPath)),
+                ResponseTransformer.toBytes());
+        return response.asInputStream();
     }
 
-    private AmazonS3 get() {
+    private S3Client get() {
         ConfigurationStorageS3 configS3 = getConfig();
-        AWSCredentials credentials = new BasicAWSCredentials(configS3.getS3AccessKey(), configS3.getS3SecretKey());
-        return AmazonS3ClientBuilder
-                .standard()
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
-                .withRegion(configS3.getS3Region())
+        AwsCredentials credentials = AwsBasicCredentials.create(configS3.getS3AccessKey(), configS3.getS3SecretKey());
+        return S3Client
+                .builder()
+                .region(Region.of(configS3.getS3Region()))
+                .credentialsProvider(StaticCredentialsProvider.create(credentials))
                 .build();
     }
 

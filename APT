@@ -5879,3 +5879,228 @@ at java.base/java.lang.Thread.run(Thread.java:842)
 2024-11-14T15:06:24.717-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-14T15:06:24.720-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-14T15:06:24.724-03:00  INFO 27728 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-14T18:39:18.887-03:00  INFO 24580 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Starting PluginEngineApplication using Java 17.0.9 with PID 24580 (C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine\target\classes started by ricar in C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine)
+2024-11-14T18:39:18.889-03:00  INFO 24580 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-11-14T18:39:19.362-03:00  INFO 24580 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-14T18:39:19.422-03:00  INFO 24580 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2024-11-14T18:39:20.242-03:00  INFO 24580 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-14T18:39:20.258-03:00  INFO 24580 --- [PluginEngine] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-14T18:39:20.258-03:00  INFO 24580 --- [PluginEngine] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-14T18:39:20.307-03:00  INFO 24580 --- [PluginEngine] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-14T18:39:20.307-03:00  INFO 24580 --- [PluginEngine] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1377 ms
+2024-11-14T18:39:20.491-03:00  INFO 24580 --- [PluginEngine] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-14T18:39:20.563-03:00  INFO 24580 --- [PluginEngine] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-14T18:39:20.632-03:00  INFO 24580 --- [PluginEngine] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-14T18:39:20.897-03:00  INFO 24580 --- [PluginEngine] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-14T18:39:20.927-03:00  INFO 24580 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-14T18:39:21.622-03:00  INFO 24580 --- [PluginEngine] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@655203e3
+2024-11-14T18:39:21.624-03:00  INFO 24580 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-14T18:39:21.681-03:00  WARN 24580 --- [PluginEngine] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-14T18:39:22.529-03:00  INFO 24580 --- [PluginEngine] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-14T18:39:22.531-03:00  INFO 24580 --- [PluginEngine] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T18:39:23.066-03:00  WARN 24580 --- [PluginEngine] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-14T18:39:23.631-03:00  INFO 24580 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-14T18:39:23.644-03:00  INFO 24580 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Started PluginEngineApplication in 5.133 seconds (process running for 5.861)
+2024-11-14T18:39:28.539-03:00  INFO 24580 --- [PluginEngine] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-14T18:39:28.539-03:00  INFO 24580 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-14T18:39:28.540-03:00  INFO 24580 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-14T18:39:39.658-03:00  WARN 24580 --- [PluginEngine] [http-nio-8080-exec-3] com.amazonaws.util.VersionInfoUtils      : The AWS SDK for Java 1.x entered maintenance mode starting July 31, 2024 and will reach end of support on December 31, 2025. For more information, see https://aws.amazon.com/blogs/developer/the-aws-sdk-for-java-1-x-is-in-maintenance-mode-effective-july-31-2024/
+You can print where on the file system the AWS SDK for Java 1.x core runtime is located by setting the AWS_JAVA_V1_PRINT_LOCATION environment variable or aws.java.v1.printLocation system property to 'true'.
+This message can be disabled by setting the AWS_JAVA_V1_DISABLE_DEPRECATION_ANNOUNCEMENT environment variable or aws.java.v1.disableDeprecationAnnouncement system property to 'true'.
+The AWS SDK for Java 1.x is being used here:
+at java.base/java.lang.Thread.getStackTrace(Thread.java:1621)
+at com.amazonaws.util.VersionInfoUtils.printDeprecationAnnouncement(VersionInfoUtils.java:81)
+at com.amazonaws.util.VersionInfoUtils.<clinit>(VersionInfoUtils.java:59)
+at com.amazonaws.internal.EC2ResourceFetcher.<clinit>(EC2ResourceFetcher.java:44)
+at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.<init>(InstanceMetadataServiceCredentialsFetcher.java:38)
+at com.amazonaws.auth.InstanceProfileCredentialsProvider.<init>(InstanceProfileCredentialsProvider.java:111)
+at com.amazonaws.auth.InstanceProfileCredentialsProvider.<init>(InstanceProfileCredentialsProvider.java:91)
+at com.amazonaws.auth.InstanceProfileCredentialsProvider.<init>(InstanceProfileCredentialsProvider.java:75)
+at com.amazonaws.auth.InstanceProfileCredentialsProvider.<clinit>(InstanceProfileCredentialsProvider.java:58)
+at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.initializeProvider(EC2ContainerCredentialsProviderWrapper.java:66)
+at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.<init>(EC2ContainerCredentialsProviderWrapper.java:55)
+at com.amazonaws.auth.DefaultAWSCredentialsProviderChain.<init>(DefaultAWSCredentialsProviderChain.java:60)
+at com.amazonaws.auth.DefaultAWSCredentialsProviderChain.<clinit>(DefaultAWSCredentialsProviderChain.java:54)
+at com.amazonaws.services.s3.AmazonS3ClientBuilder.standard(AmazonS3ClientBuilder.java:46)
+at dev.poncio.AutomatePluginTask.PluginEngine.services.StorageS3Service.get(StorageS3Service.java:55)
+at dev.poncio.AutomatePluginTask.PluginEngine.services.StorageS3Service.uploadFile(StorageS3Service.java:36)
+at dev.poncio.AutomatePluginTask.PluginEngine.services.PluginRecordService.addNewPluginRecord(PluginRecordService.java:66)
+at dev.poncio.AutomatePluginTask.PluginEngine.controllers.PluginLoadController.persistPlugin(PluginLoadController.java:98)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+at java.base/java.lang.Thread.run(Thread.java:842)
+2024-11-14T18:39:40.205-03:00  WARN 24580 --- [PluginEngine] [http-nio-8080-exec-3] c.amazonaws.services.s3.AmazonS3Client   : No content length specified for stream data.  Stream contents will be buffered in memory and could result in out of memory errors.
+2024-11-14T18:39:41.063-03:00  WARN 24580 --- [PluginEngine] [http-nio-8080-exec-3] com.amazonaws.util.Base64                : JAXB is unavailable. Will fallback to SDK implementation which may be less performant.If you are using Java 9+, you will need to include javax.xml.bind:jaxb-api as a dependency.
+2024-11-14T18:52:56.169-03:00  INFO 24580 --- [PluginEngine] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T18:52:56.171-03:00  INFO 24580 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-14T18:52:56.173-03:00  INFO 24580 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-14T18:53:46.217-03:00  INFO 2744 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Starting PluginEngineApplication using Java 17.0.9 with PID 2744 (C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine\target\classes started by ricar in C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine)
+2024-11-14T18:53:46.219-03:00  INFO 2744 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-11-14T18:53:46.675-03:00  INFO 2744 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-14T18:53:46.728-03:00  INFO 2744 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2024-11-14T18:53:47.637-03:00  INFO 2744 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-14T18:53:47.652-03:00  INFO 2744 --- [PluginEngine] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-14T18:53:47.653-03:00  INFO 2744 --- [PluginEngine] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-14T18:53:47.735-03:00  INFO 2744 --- [PluginEngine] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-14T18:53:47.735-03:00  INFO 2744 --- [PluginEngine] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1475 ms
+2024-11-14T18:53:48.018-03:00  INFO 2744 --- [PluginEngine] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-14T18:53:48.175-03:00  INFO 2744 --- [PluginEngine] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-14T18:53:48.211-03:00  INFO 2744 --- [PluginEngine] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-14T18:53:48.453-03:00  INFO 2744 --- [PluginEngine] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-14T18:53:48.481-03:00  INFO 2744 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-14T18:53:48.865-03:00  INFO 2744 --- [PluginEngine] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@356b6b5d
+2024-11-14T18:53:48.866-03:00  INFO 2744 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-14T18:53:48.923-03:00  WARN 2744 --- [PluginEngine] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-14T18:53:49.783-03:00  INFO 2744 --- [PluginEngine] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-14T18:53:49.785-03:00  INFO 2744 --- [PluginEngine] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T18:53:50.321-03:00  WARN 2744 --- [PluginEngine] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-14T18:53:50.833-03:00  INFO 2744 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-14T18:53:50.847-03:00  INFO 2744 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Started PluginEngineApplication in 4.991 seconds (process running for 5.337)
+2024-11-14T18:53:54.966-03:00  INFO 2744 --- [PluginEngine] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-14T18:53:54.966-03:00  INFO 2744 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-14T18:53:54.967-03:00  INFO 2744 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-14T18:54:27.331-03:00 ERROR 2744 --- [PluginEngine] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: software.amazon.awssdk.core.exception.SdkClientException: Unable to load an HTTP implementation from any provider in the chain. You must declare a dependency on an appropriate HTTP implementation or pass in an SdkHttpClient explicitly to the client builder.] with root cause
+
+software.amazon.awssdk.core.exception.SdkClientException: Unable to load an HTTP implementation from any provider in the chain. You must declare a dependency on an appropriate HTTP implementation or pass in an SdkHttpClient explicitly to the client builder.
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:111) ~[sdk-core-2.19.8.jar:na]
+	at software.amazon.awssdk.core.internal.http.loader.DefaultSdkHttpClientBuilder.lambda$buildWithDefaults$1(DefaultSdkHttpClientBuilder.java:49) ~[sdk-core-2.19.8.jar:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at software.amazon.awssdk.core.internal.http.loader.DefaultSdkHttpClientBuilder.buildWithDefaults(DefaultSdkHttpClientBuilder.java:43) ~[sdk-core-2.19.8.jar:na]
+	at software.amazon.awssdk.core.client.builder.SdkDefaultClientBuilder.lambda$resolveSyncHttpClient$7(SdkDefaultClientBuilder.java:349) ~[sdk-core-2.19.8.jar:na]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at software.amazon.awssdk.core.client.builder.SdkDefaultClientBuilder.resolveSyncHttpClient(SdkDefaultClientBuilder.java:349) ~[sdk-core-2.19.8.jar:na]
+	at software.amazon.awssdk.core.client.builder.SdkDefaultClientBuilder.finalizeSyncConfiguration(SdkDefaultClientBuilder.java:288) ~[sdk-core-2.19.8.jar:na]
+	at software.amazon.awssdk.core.client.builder.SdkDefaultClientBuilder.syncClientConfiguration(SdkDefaultClientBuilder.java:182) ~[sdk-core-2.19.8.jar:na]
+	at software.amazon.awssdk.services.s3.DefaultS3ClientBuilder.buildClient(DefaultS3ClientBuilder.java:36) ~[s3-2.19.8.jar:na]
+	at software.amazon.awssdk.services.s3.DefaultS3ClientBuilder.buildClient(DefaultS3ClientBuilder.java:25) ~[s3-2.19.8.jar:na]
+	at software.amazon.awssdk.core.client.builder.SdkDefaultClientBuilder.build(SdkDefaultClientBuilder.java:148) ~[sdk-core-2.19.8.jar:na]
+	at dev.poncio.AutomatePluginTask.PluginEngine.services.StorageS3Service.get(StorageS3Service.java:53) ~[classes/:na]
+	at dev.poncio.AutomatePluginTask.PluginEngine.services.StorageS3Service.downloadFile(StorageS3Service.java:38) ~[classes/:na]
+	at dev.poncio.AutomatePluginTask.PluginEngine.services.PluginRecordService.loadPluginFromUUID(PluginRecordService.java:97) ~[classes/:na]
+	at dev.poncio.AutomatePluginTask.PluginEngine.controllers.PluginLoadController.loadPluginAsync(PluginLoadController.java:64) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.31.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.14.jar:6.1.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.31.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.14.jar:6.1.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.31.jar:10.1.31]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-11-14T18:55:28.137-03:00  INFO 2744 --- [PluginEngine] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T18:55:28.139-03:00  INFO 2744 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-14T18:55:28.141-03:00  INFO 2744 --- [PluginEngine] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-14T19:02:14.505-03:00  INFO 28648 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Starting PluginEngineApplication using Java 17.0.9 with PID 28648 (C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine\target\classes started by ricar in C:\DEV\Pessoal\AutomatePluginTasks\PluginEngine)
+2024-11-14T19:02:14.507-03:00  INFO 28648 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-11-14T19:02:14.927-03:00  INFO 28648 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-14T19:02:14.982-03:00  INFO 28648 --- [PluginEngine] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2024-11-14T19:02:15.816-03:00  INFO 28648 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-14T19:02:15.826-03:00  INFO 28648 --- [PluginEngine] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-14T19:02:15.826-03:00  INFO 28648 --- [PluginEngine] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-14T19:02:15.896-03:00  INFO 28648 --- [PluginEngine] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-14T19:02:15.896-03:00  INFO 28648 --- [PluginEngine] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1345 ms
+2024-11-14T19:02:16.199-03:00  INFO 28648 --- [PluginEngine] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-14T19:02:16.394-03:00  INFO 28648 --- [PluginEngine] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-14T19:02:16.443-03:00  INFO 28648 --- [PluginEngine] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-14T19:02:16.691-03:00  INFO 28648 --- [PluginEngine] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-14T19:02:16.713-03:00  INFO 28648 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-14T19:02:17.059-03:00  INFO 28648 --- [PluginEngine] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e2d44f3
+2024-11-14T19:02:17.061-03:00  INFO 28648 --- [PluginEngine] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-14T19:02:17.115-03:00  WARN 28648 --- [PluginEngine] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-14T19:02:17.936-03:00  INFO 28648 --- [PluginEngine] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-14T19:02:17.938-03:00  INFO 28648 --- [PluginEngine] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T19:02:18.452-03:00  WARN 28648 --- [PluginEngine] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-14T19:02:18.940-03:00  INFO 28648 --- [PluginEngine] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-14T19:02:18.949-03:00  INFO 28648 --- [PluginEngine] [main] d.p.A.P.PluginEngineApplication          : Started PluginEngineApplication in 4.784 seconds (process running for 5.086)
+2024-11-14T19:02:21.027-03:00  INFO 28648 --- [PluginEngine] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-14T19:02:21.027-03:00  INFO 28648 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-14T19:02:21.028-03:00  INFO 28648 --- [PluginEngine] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

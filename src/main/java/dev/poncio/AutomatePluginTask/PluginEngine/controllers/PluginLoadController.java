@@ -87,7 +87,7 @@ public class PluginLoadController {
         return ResponseEntity.ok(output);
     }
 
-    @PostMapping("/parameters/retrieve/{uuid}")
+    @GetMapping("/parameters/retrieve/{uuid}")
     public ResponseEntity<List<PluginTaskInputParameterPrototype>> loadParameters(@PathVariable String uuid) throws PluginJarLoadException, BusinessException {
         IPluginTask plugin = this.service.loadPluginFromUUID(uuid);
         return ResponseEntity.ok(plugin.getInputParametersPrototype());
