@@ -1,12 +1,15 @@
 package dev.poncio.AutomatePluginTask.PluginEngine.controllers;
 
+import dev.poncio.AutomatePluginTask.PluginEngine.dto.PluginRecordDTO;
 import dev.poncio.AutomatePluginTask.PluginEngine.dto.PluginV1RecordExecution;
+import dev.poncio.AutomatePluginTask.PluginEngine.dto.PluginV1RecordPreExecution;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.PluginExecution;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.PluginRecord;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.BusinessException;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.NewPluginRecordException;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginExecutionException;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginJarLoadException;
+import dev.poncio.AutomatePluginTask.PluginEngine.mapper.PluginRecordMapper;
 import dev.poncio.AutomatePluginTask.PluginEngine.services.PluginRecordService;
 import dev.poncio.AutomatePluginTask.PluginEngine.services.PluginV1ExecutionService;
 import dev.poncio.AutomatePluginTask.PluginSdk.v1.constants.PluginExecutionPlanEnum;
@@ -38,6 +41,9 @@ public class PluginV1LoadController {
 
     @Autowired
     private PluginV1ExecutionService pluginExecutionService;
+
+    @Autowired
+    private PluginRecordMapper mapper;
 
     @PostMapping("/load/{uuid}")
     public ResponseEntity<PluginTaskOutput> loadPlugin(@PathVariable String uuid, @RequestBody PluginV1RecordExecution executionInput) throws PluginJarLoadException, BusinessException, PluginExecutionException {
@@ -131,6 +137,12 @@ public class PluginV1LoadController {
     public ResponseEntity<List<PluginTaskBaseParameterPrototype>> loadBaseParameters(@PathVariable String uuid) throws PluginJarLoadException, BusinessException {
         AbstractPluginTask plugin = this.service.loadPluginFromUUID(uuid);
         return ResponseEntity.ok(plugin.getBaseParametersPrototype());
+    }
+
+    @PostMapping("/base-parameters/{uuid}/set")
+    public ResponseEntity<PluginRecordDTO> setBaseParameters(@PathVariable String uuid, @RequestBody PluginV1RecordPreExecution preExecution) throws PluginJarLoadException, BusinessException {
+        PluginRecord pluginRecord = this.service.updateBaseParameters(uuid, preExecution);
+        return ResponseEntity.ok(this.mapper.map(pluginRecord));
     }
 
     @PostMapping("/persist")

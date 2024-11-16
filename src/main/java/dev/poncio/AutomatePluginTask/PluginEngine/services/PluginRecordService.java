@@ -1,6 +1,7 @@
 package dev.poncio.AutomatePluginTask.PluginEngine.services;
 
 import dev.poncio.AutomatePluginTask.PluginEngine.dto.PluginV1RecordExecution;
+import dev.poncio.AutomatePluginTask.PluginEngine.dto.PluginV1RecordPreExecution;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.PluginBaseParameterRecord;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.PluginExecutionPlan;
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.PluginParameterRecord;
@@ -113,6 +114,17 @@ public class PluginRecordService {
                                         .build())
                         .toList());
         return repository.save(newRecord);
+    }
+
+    public PluginRecord updateBaseParameters(String uuid, PluginV1RecordPreExecution preExecution) throws BusinessException {
+        PluginRecord pluginRecord = this.searchByUUID(uuid);
+        for (PluginTaskBaseParameter baseParameter : preExecution.getBaseParameters()) {
+            pluginRecord.getBaseParameters().stream()
+                    .filter(bp -> bp.getName().equals(baseParameter.getName()))
+                    .findFirst().ifPresent(baseParameterSaved -> baseParameterSaved.setValue(
+                            baseParameter.getValue() != null ? baseParameter.getValue().toString() : null));
+        }
+        return repository.save(pluginRecord);
     }
 
     public List<PluginTaskBaseParameter> transformBaseParameters(PluginRecord pluginRecord) throws PluginExecutionException {
