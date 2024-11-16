@@ -9,12 +9,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "plugin_parameter_record")
+@Table(name = "plugin_base_parameter_record")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PluginParameterRecord {
+public class PluginBaseParameterRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +22,13 @@ public class PluginParameterRecord {
     private Long id;
     @Column(name = "name")
     private String name;
+    @Column(name = "value")
+    private String value;
     @Column(name = "description")
     private String description;
     @Column(name = "type")
-    private String type;
+    @Enumerated(EnumType.STRING)
+    private ParameterTypeEnum type;
     @Column(name = "secret")
     private Boolean secret;
     @Column(name = "required")

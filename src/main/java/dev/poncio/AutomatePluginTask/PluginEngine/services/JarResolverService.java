@@ -2,7 +2,7 @@ package dev.poncio.AutomatePluginTask.PluginEngine.services;
 
 import dev.poncio.AutomatePluginTask.PluginEngine.classLoaders.JarClassLoader;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginJarLoadException;
-import dev.poncio.AutomatePluginTask.PluginSdk.interfaces.IPluginTask;
+import dev.poncio.AutomatePluginTask.PluginSdk.v1.implementation.AbstractPluginTask;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.stereotype.Service;
@@ -28,10 +28,12 @@ public class JarResolverService {
         String className = null;
         try {
             className = loadMainClassName(jarByteArray);
+            AbstractPluginTask pluginTask = resolveJarPluginTask(jarByteArray);
             return JarPluginDetail.builder()
                     .mainClassName(className)
                     .version(loadVersionClass(jarByteArray))
-                    .plugin(resolveJarPluginTask(jarByteArray))
+                    .pluginSdkVersion(pluginTask.getPluginSdkVersion())
+                    .plugin(pluginTask)
                     .build();
         } catch (IOException e) {
             throw new PluginJarLoadException("Fail to read JAR file", e);
@@ -68,16 +70,16 @@ public class JarResolverService {
         return bos.toByteArray();
     }
 
-    private IPluginTask resolveJarPluginTask(byte[] jarByteArray) throws IOException, ClassNotFoundException, PluginJarLoadException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    private AbstractPluginTask resolveJarPluginTask(byte[] jarByteArray) throws IOException, ClassNotFoundException, PluginJarLoadException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         String className = loadMainClassName(jarByteArray);
         JarClassLoader classLoader = new JarClassLoader(jarByteArray);
         Class<?> pluginClass = classLoader.loadClass(className);
         for (Class<?> innerClass : pluginClass.getDeclaredClasses()) {
             classLoader.loadClass(innerClass.getName());
         }
-        if (!IPluginTask.class.isAssignableFrom(pluginClass))
+        if (!AbstractPluginTask.class.isAssignableFrom(pluginClass))
             throw new PluginJarLoadException("Class loaded is not a IPluginTask");
-        return (IPluginTask) pluginClass.getDeclaredConstructor().newInstance();
+        return (AbstractPluginTask) pluginClass.getDeclaredConstructor().newInstance();
     }
 
     private String loadMainClassName(byte[] jarByteArray) throws IOException {
@@ -103,7 +105,8 @@ public class JarResolverService {
     public static class JarPluginDetail {
         private String mainClassName;
         private String version;
-        private IPluginTask plugin;
+        private String pluginSdkVersion;
+        private AbstractPluginTask plugin;
     }
 
 }

@@ -2,9 +2,11 @@ package dev.poncio.AutomatePluginTask.PluginEngine.services;
 
 import dev.poncio.AutomatePluginTask.PluginEngine.entities.*;
 import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.BusinessException;
+import dev.poncio.AutomatePluginTask.PluginEngine.exceptions.PluginExecutionException;
 import dev.poncio.AutomatePluginTask.PluginEngine.repositories.PluginExecutionRepository;
-import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskInputParameter;
-import dev.poncio.AutomatePluginTask.PluginSdk.domain.PluginTaskOutput;
+import dev.poncio.AutomatePluginTask.PluginSdk.v1.constants.PluginExecutionPlanEnum;
+import dev.poncio.AutomatePluginTask.PluginSdk.v1.domain.PluginTaskInputParameter;
+import dev.poncio.AutomatePluginTask.PluginSdk.v1.domain.PluginTaskOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +17,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class PluginExecutionService {
+public class PluginV1ExecutionService {
 
     @Autowired
     private PluginRecordService pluginRecordService;
@@ -26,12 +28,13 @@ public class PluginExecutionService {
     @Autowired
     private PluginExecutionRepository repository;
 
-    public PluginExecution registerNewExecution(PluginRecord recordDetached, List<PluginTaskInputParameter> inputParameterList) throws BusinessException {
+    public PluginExecution registerNewExecution(PluginRecord recordDetached, List<PluginTaskInputParameter> inputParameterList, PluginExecutionPlanEnum plan) throws BusinessException, PluginExecutionException {
         PluginRecord record = this.pluginRecordService.searchByUUID(recordDetached.getUuid());
         PluginExecution newExecution = PluginExecution.builder()
                 .pluginRecord(record)
                 .createdAt(LocalDateTime.now())
                 .uuid(UUID.randomUUID().toString())
+                .plan(plan.toString())
                 .build();
         List<PluginExecutionParameter> executionParameters = inputParameterList.stream()
                 .filter(inputParameter -> record.getParameters().stream()

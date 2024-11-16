@@ -1,7 +1,7 @@
 package dev.poncio.AutomatePluginTask.PluginEngine.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import dev.poncio.AutomatePluginTask.PluginSdk.constants.ParameterTypeEnum;
+import dev.poncio.AutomatePluginTask.PluginSdk.v1.constants.ParameterTypeEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

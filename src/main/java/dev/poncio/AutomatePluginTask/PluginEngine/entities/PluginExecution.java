@@ -28,6 +28,8 @@ public class PluginExecution {
     private LocalDateTime startedAt;
     @Column(name = "finished_at")
     private LocalDateTime finishedAt;
+    @Column(name = "plan")
+    private String plan;
     @Column(name = "code")
     private Integer code;
     @Column(name = "success")

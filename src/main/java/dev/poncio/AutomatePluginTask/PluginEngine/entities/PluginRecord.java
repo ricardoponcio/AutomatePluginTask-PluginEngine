@@ -28,9 +28,15 @@ public class PluginRecord {
     private String mainClassName;
     @Column(name = "version_class")
     private String versionClass;
+    @Column(name = "plugin_sdk_version")
+    private String pluginSdkVersion;
     @Column(name = "uuid")
     private String uuid;
     @OneToMany(mappedBy = "pluginRecord", cascade = CascadeType.ALL)
     private List<PluginParameterRecord> parameters;
+    @OneToMany(mappedBy = "pluginRecord", cascade = CascadeType.ALL)
+    private List<PluginBaseParameterRecord> baseParameters;
+    @OneToMany(mappedBy = "pluginRecord", cascade = CascadeType.ALL)
+    private List<PluginExecutionPlan> availablePlans;
 
 }

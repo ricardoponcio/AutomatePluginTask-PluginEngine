@@ -4,6 +4,7 @@ create table plugin_record (
 	md5 text not null,
 	main_class_name text not null,
 	version_class text not null,
+	plugin_sdk_version text not null,
 	uuid text not null
 );
 
@@ -13,6 +14,24 @@ create table plugin_parameter_record (
 	description text not null,
 	type text not null,
 	secret boolean not null default false,
+	required boolean not null default false,
+	plugin_id bigint not null references plugin_record(id)
+);
+
+create table plugin_execution_plan (
+	id serial primary key,
+	plan text not null,
+	plugin_id bigint not null references plugin_record(id)
+);
+
+create table plugin_base_parameter_record (
+	id serial primary key,
+	name text not null,
+	value text null,
+	description text not null,
+	type text not null,
+	secret boolean not null default false,
+	required boolean not null default false,
 	plugin_id bigint not null references plugin_record(id)
 );
 
