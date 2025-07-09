@@ -2,7 +2,7 @@
 
 ## An Automate Plugin Task module
 
-PluginEngine is the backend service for managing, executing, and monitoring plugins built with the [PluginSdk](../PluginSdk/README.md). It enables dynamic plugin loading, synchronous/asynchronous execution, progress tracking, and plugin file storage using S3.
+PluginEngine is the backend service for managing, executing, and monitoring plugins built with the [PluginSdk](https://github.com/ricardoponcio/AutomatePluginTask-PluginSdk). It enables dynamic plugin loading, synchronous/asynchronous execution, progress tracking, and plugin file storage using S3.
 
 ---
 
