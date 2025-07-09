@@ -97,8 +97,9 @@ java -jar target/PluginEngine-0.0.1-SNAPSHOT.jar
 
 ## References
 
-- [PluginSdk](../PluginSdk/README.md) — How to build compatible plugins
-- [SampleHelloPlugin](../SampleHelloPlugin/README.md) — Example plugin implementation
+- [PluginSdk](https://github.com/ricardoponcio/AutomatePluginTask-PluginSdk) — How to build compatible plugins
+- [SampleHelloPlugin](https://github.com/ricardoponcio/AutomatePluginTask-SampleHelloPlugin) — Example plugin implementation
+- [Main Repository](https://github.com/ricardoponcio/AutomatePluginTask)
 
 ---
 
